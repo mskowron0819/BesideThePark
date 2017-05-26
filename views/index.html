@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible', content='IE=edge, chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description', content='description of your site'>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/master.css">
+</head>
+<body>
+<script id="BesideThePark-template" type="text/x-handlebars-template">
+    <header>
+        {{#header}}
+        <nav>
+            <div>
+                <img class="hide">
+                <h1>{{title}}</h1>
+                <img src={{searchIcon}} alt="search" class="hide">
+                <img src={{menuIcon}} alt="search" class="hide">
+            </div>
+        </nav>
+        <section class="container">
+            <div class="row">
+                <div class="column-6 column">
+                    <h2 class="column-12" id="textTitle">{{textTitle}}</h2>
+                    <p class="column-12" id="text">{{text}}</p>
+                </div>
+                <div class="column-6">
+                    <img src="{{iphoneImg}}" alt="iphone image" id="iphone">
+                </div>
+         </div>
+        </section>
+        {{/header}}
+    </header>
+</script>
+<div id="out"></div>
+<script src="./js/main.js"></script>
+</body>
+</html>
+

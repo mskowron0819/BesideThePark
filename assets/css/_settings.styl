@@ -1,0 +1,78 @@
+
+// Font stacks (add your own!)
+$helvetica-neue = "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif
+$helvetica = "Helvetica Neue", Helvetica, Arial, sans-serif
+$georgia = Georgia, Cambria, "Times New Roman", Times, serif
+$lucidia-grande = "Lucida Grande", Tahoma, Verdana, Arial, sans-serif
+$monospace = unquote("'Bitstream Vera Sans Mono', Consolas, Courier, monospace")
+$verdana = Verdana, Geneva, sans-serif
+
+// Default font settings
+$font-stack = $helvetica-neue
+$font-size = 16
+$font-color = #555
+
+// Colors (via http://clrs.cc - slightly modded)
+$logo-text= #9BC651
+$blue     = #0074D9
+$aqua     = #7FDBFF
+$teal     = #39CCCC
+$olive    = #3D9970
+$green    = #2ECC40
+$lime     = #01FF70
+$yellow   = #FFDC00
+$orange   = #FF851B
+$red      = #D13F19
+$maroon   = #85144B
+$fuchsia  = #F012BE
+$purple   = #B10DC9
+$white    = #FFFFFF
+$silver   = #DDDDDD
+$gray     = #AAAAAA
+$black    = #222222
+
+// Custom image base path for axis mixins
+$img-path = '/img/'
+
+// Ligatures
+$ligatures = false
+
+responsive-bg-image(image-width, image-height)
+  background-size: 100%
+  height: 0
+  padding-bottom: percentage(image-height / image-width)
+  display: block
+
+
+gap = 1%
+gridsize = 12
+
+html
+  box-sizing: border-box
+*, *:before, *:after
+  box-sizing: inherit
+.container
+  width: 80%
+  margin: 0 auto
+  border: 1px solid red
+.row
+  border: 1px solid green
+  margin-left: (-1 * gap)
+  margin-right: (-1 * gap)
+  &:after
+    content: " "
+    display: table
+    clear: both
+
+
+//default styles
+for i in (1..gridsize)
+  .column-{i}
+    width: (i / gridsize * 100%)
+    padding-left: gap
+    padding-right: gap
+    float: left
+    border: 1px solid black
+//  and finally some demo styles
+.column.clr
+  clear: both

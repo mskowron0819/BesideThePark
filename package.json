@@ -1,0 +1,22 @@
+{
+  "name": "beside-the-park",
+  "description": "test project",
+  "dependencies": {
+    "autoprefixer-stylus": "0.9.x",
+    "axis": "0.6.x",
+    "babel-core": "^6.24.1",
+    "coffee-script": "1.x",
+    "css-pipeline": "0.3.x",
+    "handlebars": "^4.0.10",
+    "js-pipeline": "0.2.x",
+    "jstransformer-marked": "1.x",
+    "marked": "0.3.x",
+    "roots-browserify": "^0.6.0",
+    "rupture": "0.6.x",
+    "stylus": "0.54.x"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0"
+  }
+}
