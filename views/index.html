@@ -9,33 +9,93 @@
     <link rel="stylesheet" href="./css/master.css">
 </head>
 <body>
-<script id="BesideThePark-template" type="text/x-handlebars-template">
-    <header>
-        {{#header}}
-        <nav>
-            <div>
-                <img class="hide">
-                <h1>{{title}}</h1>
-                <img src={{searchIcon}} alt="search" class="hide">
-                <img src={{menuIcon}} alt="search" class="hide">
-            </div>
-        </nav>
+    <script id="BesideThePark-template" type="text/x-handlebars-template">
+        <header>
+            {{#header}}
+            <nav>
+                <div>
+                    <img class="hide">
+                    <h1>{{logo}}</h1>
+                    <img src={{searchIcon}} alt="search" class="hide" id="search">
+                    <img src={{menuIcon}} alt="search" class="hide" id="menu">
+                </div>
+                <div class="hide" id="slide--menu">
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="container">
+                <div class="row">
+                    <div class="column-6">
+                        <h2 class="column-12 animate" id="header-title">{{title}}</h2>
+                        <p class="column-12" id="header-text">{{text}}</p>
+                    </div>
+                    <div class="column-6">
+                        <img src="{{iphoneImg}}" alt="iphone image" id="iphone">
+                    </div>
+             </div>
+            </section>
+            {{/header}}
+        </header>
         <section class="container">
-            <div class="row">
-                <div class="column-6 column">
-                    <h2 class="column-12" id="textTitle">{{textTitle}}</h2>
-                    <p class="column-12" id="text">{{text}}</p>
-                </div>
-                <div class="column-6">
-                    <img src="{{iphoneImg}}" alt="iphone image" id="iphone">
-                </div>
-         </div>
+            {{#articles}}
+            <div class="row articles">
+                <article class="column-6 articles__article1">
+                    <h3 class="article1__title">{{title}}</h3>
+                    <p>{{article1}}</p>
+                    <p>{{article2}}</p>
+                    <p>{{article3}}</p>
+                </article>
+                <article class="column-6 articles__article2">
+                    <p>{{article4}}</p>
+                    <p>{{article5}}</p>
+                </article>
+            </div>
+            {{/articles}}
         </section>
-        {{/header}}
-    </header>
-</script>
-<div id="out"></div>
-<script src="./js/main.js"></script>
+        <section class="container">
+            {{#boxes}}
+            <div class="row boxes">
+                <div class="column-8 boxes__1-large">
+                    {{#box1Large}}
+                    <h4 class="boxes__title">{{title}}</h4>
+                    <p>{{text}}</p>
+                    <a href={{href}}>{{link}}</a>
+                    {{/box1Large}}
+                </div>
+                <div class="column-4 boxes__1-small">
+                    {{#box1Small}}
+                    <h4 class="boxes__title">{{title}}</h4>
+                    <p>{{text}}</p>
+                    <a href={{href}}>{{link}}</a>
+                    {{/box1Small}}
+                </div>
+            </div>
+            <div class="row boxes">
+                <div class="column-8 boxes__2-large">
+                    {{#box2Large}}
+                    <h4 class="boxes__title">{{title}}</h4>
+                    <p>{{text}}</p>
+                    <a href={{href}}>{{link}}</a>
+                    {{/box2Large}}
+                </div>
+                <div class="column-4 boxes__2-small">
+                    {{#box2Small}}
+                    <h4 class="boxes__title">{{title}}</h4>
+                    <p>{{text}}</p>
+                    <a href={{href}}>{{link}}</a>
+                    {{/box2Small}}
+                </div>
+            </div>
+            {{/boxes}}
+        </section>
+    </script>
+    <div id="out"></div>
+    <script src="./js/main.js"></script>
 </body>
 </html>
 
